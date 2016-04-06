@@ -1,0 +1,394 @@
+body,th,td,div,p,h1,h2,li,dt,dd {
+ font-family: Tahoma, "Gill Sans", Arial, sans-serif;
+}
+
+body {
+ /* negative margins for the benefit of ns4 */
+ margin: -10px 0px 0px -10px;
+ color: #333333;
+ background-color: #ffffff;
+}
+
+/* margins for the rest of the browser world */
+/*/*/a{}
+body {
+ margin: 0px;
+}
+/**/
+
+img.box {
+ vertical-align: middle;
+}
+
+a:link {
+ color: #006486;
+}
+a:active {
+ color: #1d93b6;
+}
+a:hover {
+ color: #64bfdb;
+}
+a:visited {
+ color: #4e5265; /* TODO: needs to be different from :link */
+}
+
+a img {
+ border: 0px;
+ color: #ffffff; /* makes border disappear in ns4 */
+}
+
+/* all of this mess because browsers can't agree on what the default size is. */
+h1, h2 {
+ font-size: medium;
+}
+@media screen {
+ html>body h1, html>body h2 {
+  font-size: large;
+  f\ont-size: medium;
+ }
+ head:first-child+body h1, head:first-child+body h2 {
+  font-size: large;
+ }
+}
+
+ul {
+ list-style-image: url(images/box.png);
+ list-style-type: square;
+}
+
+table.data {
+ border-collapse: collapse;
+ border: 1px solid #bdcebb;
+}
+table.data th {
+ border: 1px solid #bdcebb;
+ background: #cbdac9;
+}
+table.data td {
+ border: 1px solid #bdcebb;
+ background: #e3ebe2;
+}
+
+input.required, textarea.required {
+ background: #e3ebe2;
+}
+input.bad, textarea.bad {
+ background: #ffcd76;
+}
+
+.error {
+ color: #e18a07;
+}
+
+p.byline {
+ font-size: smaller;
+ font-weight: bold;
+}
+
+#header {
+ width: 100%;
+ border: 0px;
+ margin: 0px;
+ padding: 0px;
+ border-spacing: 0px;
+}
+#header td {
+ padding: 0px;
+ font-size: 12px;
+}
+
+#header #logo {
+ vertical-align: middle;
+}
+#header #logo img {
+/*/*/
+ margin: 2px 15px;
+ border: none; /* workaround for layout quirk in ie5.5 */
+/* stupid ns4. */
+}
+
+#header #tagline {
+ font-size: 12px;
+ font-weight: bold;
+ font-style: italic;
+ color: #006486;
+ white-space: nowrap;
+}
+
+#header #navigation {
+ color: #666666;
+ text-align: right;
+ white-space: nowrap;
+}
+#header #searchfields {
+ padding: 0px 10px;
+}
+
+#search {
+ margin: 0px;
+}
+
+#search #q {
+ font-size: 11px;
+/*/*/
+ width: 100px;
+ padding: 3px 4px;
+ border: 1px solid #bdcebb;
+/* stupid ns4. */
+}
+#search #submit {
+ background: #bdcebb;
+ color: #ffffff;
+ font-weight: bold;
+/*/*/
+ border: 1px outset #bdcebb;
+ font-size: 10px;
+ voice-family: "\"}\""; 
+ voice-family: inherit;
+ padding: 3px 4px;
+/* stupid ns4. */
+} 
+#header #topnav {
+ vertical-align: bottom;
+}
+
+#topnav table {
+ border-spacing: 0px;
+ height: 18px;
+}
+
+#topnav td {
+ padding: 2px 8px;
+ background-color: #e2e9eb;
+ white-space: nowrap;
+ border: none;
+ font-size: 12px;
+ text-align: center;
+}
+#topnav td.sep {
+ padding: 0px;
+}
+#topnav td.sep img {
+ display: block;
+}
+
+#topnav td.a {
+ background-color: #1d93b6; 
+}
+#topnav td.s {
+ background-color: #bdcebb; 
+}
+
+#topnav a:link {
+ text-decoration: none;
+ color: #000000;
+}
+#topnav a:visited {
+ text-decoration: none;
+ color: #000000;
+}
+#topnav a:hover {
+ text-decoration: underline;
+ color: #000000;
+}
+
+#topnav td.a a:link {
+ text-decoration: none;
+ color: #ffffff;
+}
+#topnav td.a a:visited {
+ text-decoration: none;
+ color: #ffffff;
+}
+#topnav td.a a:hover {
+ text-decoration: underline;
+ color: #ffffff;
+}
+
+#topnav td.s a:link {
+ text-decoration: none;
+ color: #000000;
+}
+#topnav td.s a:visited {
+ text-decoration: none;
+ color: #000000;
+}
+#topnav td.s a:hover {
+ text-decoration: underline;
+}
+
+#subnav {
+ background-color: #1d93b6;
+ height: 19px;
+ vertical-align: bottom;
+}
+
+#subnav #right {
+ width: 100%;
+}
+#subnav td {
+ font-size: 12px;
+ padding: 0px 4px 0px 10px;
+ border-bottom: 1px solid #2a5a8a;
+ vertical-align: bottom;
+ white-space: nowrap;
+}
+#subnav td.sep {
+ padding: 0px;
+ border-bottom: 1px solid #ffffff;
+ border-bottom: none;
+}
+#subnav td.sep img {
+ padding: 0px;
+ display: block;
+}
+#subnav td.u {
+ background: #ffffff;
+ padding-left: 0px;
+ border-bottom: 1px solid #ffffff;
+}
+#subnav img {
+ vertical-align: bottom;
+}
+
+#subnav a:link {
+ text-decoration: none;
+ color: #ffffff;
+}
+#subnav a:visited {
+ text-decoration: none;
+ color: #ffffff;
+}
+#subnav a:hover {
+ text-decoration: underline;
+}
+
+#subnav td.p {
+ background: #e2e9eb;
+ padding-left: 0px;
+ border-bottom: 1px solid #e2e9eb;
+}
+#subnav td.u a:link, #subnav td.p a:link {
+ text-decoration: none;
+ color: #000000;
+}
+#subnav td.u a:visited, #subnav td.p a:visited {
+ text-decoration: none;
+ color: #000000;
+}
+#subnav td.u a:hover, #subnav td.p a:hover {
+ text-decoration: underline;
+}
+
+.shim {
+ clear: both;
+}
+
+#body {
+ margin: 10px 30px;
+}
+
+#content {
+ border: none;
+ max-width: 560px;
+ padding-right: 19px;
+ margin: 10px 20px 10px 30px;
+ border-right: 1px solid #e3ebe2;
+
+ float: left;
+
+ /* for ns4 */
+ width: 560px;
+}
+#content/* for others */ {
+ /*/*/
+ width: 60%;
+ voice-family: "\"}\""; 
+ voice-family: inherit;
+ width: 60%;
+ /**/
+}
+
+/* be nice to opera */
+@media screen {
+ html>body #content {
+  width: 60%;
+ }
+}
+
+h1.title {
+ color: #1d93b6;
+}
+
+/*/*/a{}
+h1.title {
+ position: relative;
+ left: -10px;
+}
+/* */
+
+#sidebar {
+ border: none;
+ margin-top: 10px;
+ margin-right: 10px;
+ 
+ width: 220px;
+
+ /* for ns4 */
+ margin-left: 580px;
+}
+/* this next rule needs to be hidden from ns4 and ie (whew) \*/
+#sidebar {
+ /*/*/
+ float: left;
+ margin-left: auto;
+/**/
+}
+
+/* mac ie needs this */
+a{}
+
+#sidebar div.promo {
+ margin-top: 10px;
+ background: #e4ebe4;
+ border: none;
+ padding: 10px;
+}
+#sidebar div.promo p {
+ margin-top: 0px;
+}
+
+#sidebar #related h2 {
+ font-size: larger;
+ border-bottom: 1px solid #e4ebe4;
+}
+
+#sidebar #related ul {
+ list-style-type: none;
+ list-style-image: none;
+ margin-left: 0px;
+ padding-left: 0px;
+}
+
+#footer {
+ font-size: smaller;
+ clear: both;
+ border: none;
+ background: #e3ebe2;
+ margin-top: 20px;
+ padding-left: 30px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ width: 100%;
+}
+
+#footer a:link {
+ color: #666666;
+}
+#footer a:active, .footer a:hover {
+ color: #006486;
+}
+#footer a:visited {
+ color: #949494;
+}

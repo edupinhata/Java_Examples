@@ -5,8 +5,10 @@
  */
 package sistemadecadastro;
 
+import interfaceGrafica.MeuMenu;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -19,7 +21,7 @@ public class SistemaDeCadastro {
      */
     public static void main(String[] args) {
         
-         SwingUtilities.invokeLater(new Runnable(){
+        /* SwingUtilities.invokeLater(new Runnable(){
         @Override
         public void run(){
             JFrame frame = new JFrame();
@@ -28,7 +30,11 @@ public class SistemaDeCadastro {
             frame.pack();
             frame.setVisible(true);
         }
-    });
+    });*/
+        
+        MeuMenu mm = new MeuMenu();
+        mm.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        mm.setVisible(true);
     }
     
 }
